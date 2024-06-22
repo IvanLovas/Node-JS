@@ -10,10 +10,10 @@ function getTopProcess(callback) {
     let command;
 
     if (platform === 'linux' || platform === 'darwin') {
-        // Unix-like OS
+       
         command = 'ps -A -o %cpu,%mem,comm | sort -nr | head -n 1';
     } else if (platform === 'win32') {
-        // Windows OS
+       
         command = 'powershell "Get-Process | Sort-Object CPU -Descending | Select-Object -Property Name, CPU, WorkingSet -First 1 | ForEach-Object { $_.Name + \\" \\" + $_.CPU + \\" \\" + $_.WorkingSet }"';
     } else {
         callback(new Error(`Unsupported platform: ${platform}`), null);
@@ -57,12 +57,12 @@ function main() {
             process.stdout.write(`\r${processInfo}`);
 
             const currentTime = Date.now();
-            if (currentTime - lastLogTime >= 60000) {  // Log every minute
+            if (currentTime - lastLogTime >= 60000) {
                 logProcessInfo(processInfo);
                 lastLogTime = currentTime;
             }
         });
-    }, 100);  // Refresh rate of 10 times per second (100 milliseconds)
+    }, 100);
 }
 
 main();
