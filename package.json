@@ -7,7 +7,7 @@
     "task1": "nodemon task1.js",
     "task2": "nodemon task2.js",
     "task3": "nodemon task3.js",
-    "test": "jest --runInBand --silent",
+    "test": "jest --config=jest.config.js",
     "test:e2e": "jest --runInBand --silent tests/e2e/",
     "test:coverage": "jest --coverage"
   },
