@@ -21,8 +21,12 @@
     - npm run test - to run unit and integration tests
     - npm run test:e2e - to run E2E tests
     - npm run test:coverage - to get code coverage
-
-
+    
+5. Users:
+    - npm run start - to run server
+    - npm run stop - top stop server
+    
+    
 ## Requirements
 
 - Node.js installed on your system.

@@ -4,7 +4,7 @@
     "module": "commonjs",                    
     "lib": ["es6"],                    
     "outDir": "dist",                          
-    "rootDir": "./api/src",
+    "rootDir": "src",
     "strict": true,         
     "noImplicitAny": true,
     "esModuleInterop": true,
@@ -12,7 +12,7 @@
   },
 
   "include": [
-    "api/src/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
